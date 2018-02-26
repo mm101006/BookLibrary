@@ -1,0 +1,89 @@
+{% extends "main.html" %}
+{% block content %}
+
+
+{% for book in books %}
+    <div id="book" class="card">
+        <div class="card-divider">
+            <p><strong>Book: {{book.title}}</strong></p>
+        </div>
+    	<button class="button small" id="edit" onclick="goBack()">Back to Library</button>
+        {% if book.image == '' %}
+            <img id="bookImage" src='/static/image/smallquestion.png'>
+        {% else %}
+            <img id="bookImage" src={{book.image|striptags}}>
+        {% endif %}
+        <div class="card-section">
+            <p>{{book.description}}</p>
+            <div class="row small-up-1 medium-up-2 large-up-3">
+                <div class="column">Year Published: {{book.publishedDate}}</div>
+                <div class="column">Pages: {{book.pages}}</div>
+                <div class="column"><a href="{{book.webReaderLink}}">Link to Book</a></div>
+            </div>
+        </div>
+        <div>
+            <form action="{{url_for('editBook', author_id = author.id, book_id=book.id)}}" method = 'GET'>
+                <button class="button small" id="edit" data-toggle="example-dropdown-top-center">Edit Book</button>
+            </form>
+        </div>
+        <div>
+             <form action="{{ url_for('deleteBook', author_id = author.id, book_id = book.id)}}" method = 'POST'>
+                    <button class="button small" type="submit" onclick="return confirm('Are you sure you want to delete the book {{book.title}}?');" id="delete" type="submit">Delete</button>
+            </form>
+        </div>
+    </div>
+{% endfor %}
+
+<div class="reveal editBook" id="AddBookModal" data-reveal data-reset-on-close="true">
+    <h1 class="titleBook">Add Book: </h1>
+    <form action="{{url_for('newBook', author_id = author.id)}}" method = 'POST'>
+        <div class="row small-up-1 medium-up-2 large-up-3">
+            <div class="columns">
+                <label class="editLabel" for="title">Title:</label>
+                <input type="text" maxlength="250" name="title" value="">
+            </div>
+            <div class="columns">
+                <label class="editLabel" for="subtitle">Subtitle:</label>
+                <input type="text" maxlength="250" name="subtitle" value="">
+            </div>
+            <div class="columns">
+                <label class="editLabel" for="author">Author:</label>
+                <input type="text" maxlength="250" name="author" value="">
+            </div>
+            <div class="columns">
+                <label class="editLabel" for="description">Description:</label>
+                <input type="text" maxlength="250" name="description" value="">
+            </div>
+            <div class="columns">
+                <label class="editLabel" for="publishedDate">PublishedDate:</label>
+                <input type="year" maxlength="250" name="publishedDate" value="">
+            </div>
+            <div class="columns">
+                <label class="editLabel" for="pages">Pages:</label>
+                <input type="number" maxlength="250" name="pages" value="">
+            </div>
+            <div class="columns">
+                <label class="editLabel" for="webReaderLink">WebReaderLink:</label>
+                <input type="url" maxlength="250" name="webReaderLink" value="">
+            </div>
+            <div class="columns">
+                <label class="editLabel" for="category">Category:</label>
+                <input type="text" maxlength="250" name="category" value="">
+            </div>
+            <div class="columns">
+                <label class="editLabel" for="image">Image:</label>
+                <input type="url" maxlength="250" name="image" value="">
+            </div>
+        </div>
+        <div>
+            <button class="button small" type="submit" id="editBook" type="submit">
+            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Save</button>
+        </div>
+    </form>
+    <div>
+        <button class="button small" id="cancelBook" data-close aria-label="Close modal">
+        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>Cancel</button>
+    </div>
+</div>
+
+{% endblock %}

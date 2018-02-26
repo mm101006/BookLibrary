@@ -1,0 +1,58 @@
+{% extends "main.html" %}
+{% block content %}
+
+<div class="editBook">
+	<div>
+		<h1 class="titleBook">Edit Book: {{book_id.title}}</h1>
+	</div>
+	<form action="#" method = "POST">
+		<div class="row small-up-1 medium-up-2 large-up-3">
+			<div class="columns">
+				<label class="editLabel" for="title">Title:</label>
+				<input type="text" maxlength="250" name="title" value="{{book_id.title }}">
+			</div>
+			<div class="columns">
+				<label class="editLabel" for="subtitle">Subtitle:</label>
+				<input type="text" maxlength="250" name="subtitle" value="{{book_id.subtitle }}">
+			</div>
+			<div class="columns">
+				<label class="editLabel" for="author">Author:</label>
+				<input readonly type ="text" maxlength="250" name="author" value="{{book_id.author}}">
+			</div>
+			<div class="columns">
+				<label class="editLabel" for="description">Description:</label>
+				<input type="text" maxlength="250" name="description" value="{{book_id.description}}">
+			</div>
+			<div class="columns">
+				<label class="editLabel" for="publishedDate">PublishedDate:</label>
+				<input type="year" maxlength="250" name="publishedDate" value="{{book_id.publishedDate}}">
+			</div>
+			<div class="columns">
+				<label class="editLabel" for="pages">Pages:</label>
+				<input type="number" maxlength="250" name="pages" value="{{book_id.pages}}">
+			</div>
+			<div class="columns">
+				<label class="editLabel" for="webReaderLink">WebReaderLink:</label>
+				<input type="url" maxlength="250" name="webReaderLink" value="{{book_id.webReaderLink}}">
+			</div>
+			<div class="columns">
+				<label class="editLabel" for="category">Category:</label>
+				<input type="text" maxlength="250" name="category" value="{{book_id.category}}">
+			</div>
+			<div class="columns">
+				<label class="editLabel" for="image">Image:</label>
+				<input type="text" name="image" value="{{book_id.image}}">
+			</div>
+		</div>
+		<div>
+			<button class="button small" type="submit" id="editBook" type="submit">
+			<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Save</button>
+		</div>
+	</form>
+	<div>
+		<button class="button small" onclick="window.history.back();" id="cancelBook">
+		<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>Cancel</button>
+	</div>
+</div>
+
+{% endblock %}

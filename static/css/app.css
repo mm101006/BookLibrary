@@ -1,0 +1,299 @@
+body {
+	background: url("../image/COLOURlovers.com-Bookshelf.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+div.title-bar.sticky.is-anchored.is-at-top {
+	z-index: 1;
+}
+
+div.title-bar {
+	padding: .2rem;
+}
+
+/*Login.html*/
+
+div.calloutLogin {
+	width: 80%;
+	margin: auto;
+	background: url("../image/COLOURlovers.com-Music_Library.png") no-repeat center center fixed;
+}
+
+div#loginContent {
+	text-align:center;
+	margin-top: 5%;
+}
+
+span, #result {
+	color: yellow;
+	font-family: 'Philosopher', sans-serif;
+	background-color: #adb48b;
+    text-shadow: 0px 0px 3px #000;
+}
+
+
+div#exampleModal1.reveal{
+	background: url("../image/COLOURlovers.com-Music_Library.png") no-repeat center center fixed;
+}
+
+.form-control {
+	width: auto;
+	margin: auto;
+}
+
+label {
+	color: yellow;
+	font-family: 'Arvo', serif;
+	font-size: 18px;
+	color: #000000;
+	margin-left: 30%;
+	display:inline-block;
+	background-color: #ADB48B;
+}
+
+button#submit.button {
+	margin-top: 1%;
+	margin-left: 25%;
+	width: 50%;
+	background-color: #778899;
+}
+
+.top-bar.topbar-sticky-shrink {
+	background-color: #CCCCCC;
+}
+
+.links {
+	background-color: #333333;
+}
+
+.button.small{
+	width: 100%;
+	margin: auto;
+}
+
+.button.small#name{
+	margin-top: 5%;
+}
+
+#name {
+	color: #000000;
+	font-family: 'Arvo', serif;
+	font-size: 18px;
+	background-color: #F2F7BD;
+
+}
+
+#delete {
+	background-color: #000000;
+	color: red;
+	font-size: 14px;
+	font-family: 'Arvo', serif;
+	margin-top: -1px;
+}
+
+#edit {
+	background-color: #999999;
+	color: #2F4F4F;
+	font-size: 14px;
+	font-family: 'Arvo', serif;
+}
+
+div#AddAuthorModal.reveal {
+	background: url('../image/COLOURlovers.com-Music_Library.png');
+}
+
+.row {
+	margin: auto;
+}
+
+
+
+/*For AuthorsBooks.html*/
+
+div.container {
+	margin-top: 3%;
+}
+
+#bookImage{
+	width: auto;
+	margin: auto;
+}
+
+div.column {
+	padding-left: 10%;
+}
+
+.deleteBook {
+	display:inline;
+}
+
+.slidercontainer {
+  margin: auto;
+  width: 80%;
+  color: #333;
+}
+
+.slick-slide {
+  text-align: center;
+  color: #419be0;
+  background: white;
+}
+
+.slick-dots {
+	bottom: 0;
+	width: 25%;
+	list-style: none;
+	text-align: center;
+	position: absolute;
+	top: -10px;
+
+}
+
+ul.slick-dots {
+	width: auto;
+	height: 25px;
+}
+
+div#example-dropdown-top-center.dropdown-pane.is-open {
+	width: 80%;
+	background: url("../image/COLOURlovers.com-Bookshelf.png") no-repeat center center fixed;
+}
+
+button.close-button {
+	color: red;
+}
+
+.card {
+    background: url('../image/COLOURlovers.com-Music_Library.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+div.card-section {
+	color: #362524;
+}
+
+.card-section {
+	background-color: #C9DDDD;
+}
+
+div.card-divider {
+	background-color: #F2F7BD;
+}
+
+.callout {
+	width: 80%;
+	margin: auto;
+	background-color: #C9DDDD;
+	padding: 0;
+}
+
+.authorName {
+	text-align: center;
+}
+
+
+/*For EditBooks.html*/
+
+.editBook{
+	background: url("../image/COLOURlovers.com-Music_Library.png") no-repeat center center fixed;
+}
+
+.titleBook{
+	background-color: #F2F7BD;
+}
+
+div.editBook {
+	width: 80%;
+	margin: auto;
+}
+
+h1.titleBook{
+	text-align: center;
+}
+
+#edit {
+	width: 20%;
+}
+
+button#edit.button {
+	width: 100%;
+	background-color: #778899;
+	margin-top: -1px;
+}
+
+
+#editBook {
+	background-color: #778899;
+	color: #2F4F4F;
+	font-size: 14px;
+	font-family: 'Arvo', serif;
+}
+
+#cancelBook {
+	background-color: #000000;
+	color: red;
+	font-size: 14px;
+	font-family: 'Arvo', serif;
+
+}
+
+.editLabel {
+	width: auto;
+	margin: 0;
+	color: #000000;
+	display:inline-block;
+	background-color: #ADB48B;
+}
+
+/*For books.html*/
+
+#description {
+	width: 200px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+#bookTitle {
+	width: 200px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/*For book.html*/
+
+#book {
+	width: 80%;
+	margin: auto;
+}
+
+/*Flashes*/
+
+.flashes {
+	background-color: yellow;
+	margin-top: -3%;
+	text-align: center;
+}
+
+.siteView {
+	color: yellow;
+	font-family: 'Philosopher', sans-serif;
+	background-color: #adb48b;
+	opacity: .8;
+    text-shadow: 0px 0px 3px #000;
+}
+
+.location {
+	margin-top: -2.5%;
+	margin-bottom: 1%;
+	margin-left: 1%;
+}
+
+.siteView {
+	margin: 100px;
+}

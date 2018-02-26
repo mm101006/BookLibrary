@@ -1,0 +1,39 @@
+{% extends "main.html" %}
+{% block content %}
+
+<div class="location"><span class="siteView">All books</span></div>
+
+<div class="row small-up-1 medium-up-2 large-up-4">
+	{% for book in books %}
+	<div class="small-6 large-expand columns">
+		<a style="display:block" href="{{url_for('showBook', book_id = book.id, author_id=book.idAuthor)}}">
+			<div class="cell">
+				<div class="card">
+					<div class="card-divider">
+						<p id="bookTitle">{{book.title}}</p>
+					</div>
+				    {% if book.image == '' %}
+			            <img id="bookImage" src='/static/image/smallquestion.png'>
+			        {% else %}
+			            <img id="bookImage" src={{book.image|striptags}}>
+			        {% endif %}
+					<div class="card-section">
+						<div>By: {{book.author}}</div>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+	{% endfor %}
+</div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
